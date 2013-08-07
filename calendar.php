@@ -252,16 +252,13 @@ function allCalendar($year, $month){
 		}
 	}
 	
-	echo '<a href="calendar.php'.getUrlParams(yearOfLastMonth($year,$month), monthOfLastMonth($month),1) ;
+	$allParam = '&all=n' ;
+	
 	if($all == 'y'){
-		echo '&all=y' ;
+		$allParam ='&all=y' ;
 	}	
-	echo '">前へ</a>　' ; 
-	echo '<a href="calendar.php'.getUrlParams(yearOfNextMonth($year,$month), monthOfNextMonth($month),1) ;
-	if($all == 'y'){
-		echo '&all=y' ;
-	}	
-	echo '">次へ</a>　' ; 
+	echo '<a href="calendar.php'.getUrlParams(yearOfLastMonth($year,$month), monthOfLastMonth($month),1).$allParam.'">前へ</a>　' ;
+	echo '<a href="calendar.php'.getUrlParams(yearOfNextMonth($year,$month), monthOfNextMonth($month),1).$allParam.'">次へ</a>' ;
 	echo '<br />';
 
 	if($all == 'y'){
