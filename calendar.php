@@ -2,7 +2,6 @@
 
 <?php
 function firstWeekCode($year, $month){
-
 	return weekCode($year, $month, 1);
 }
 
@@ -20,7 +19,7 @@ function weekCode($year, $month, $date){
 }
 
 function isUru($year){
-		return ($year % 4 == 0) && ($year % 100 != 0) || ($year % 400 == 0) ; 
+	return ($year % 4 == 0) && ($year % 100 != 0) || ($year % 400 == 0) ; 
 }
 
 function maxDate($year, $month){
